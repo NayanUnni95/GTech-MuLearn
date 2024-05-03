@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Silly Story Generator</title>
+  </head>
+  <body>
+    <style>
+      :root {
+        --black: #000000;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: helvetica, sans-serif;
+      }
+      .container {
+        width: 100%;
+        height: 100vh;
+      }
+      .container .main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .container .input-field {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+      }
+      .container .input-field > * {
+        margin: 0.8rem;
+      }
+      .container .input-field input[type='text'] {
+        width: 12rem;
+        height: 2rem;
+        border-radius: 0.2rem;
+        border: 1px solid var(--black);
+        padding-left: 1rem;
+      }
+      .container .main p {
+        padding: 1rem;
+        visibility: hidden;
+        max-width: 25rem;
+        background-color: var(--black);
+        color: white;
+        border-radius: 0.5rem;
+      }
+      button {
+        width: 8rem;
+        background-color: skyblue;
+        color: var(--black);
+        border: 2px solid var(--black);
+        border-radius: 0.3rem;
+        margin: 1rem;
+        padding: 0.5rem;
+      }
+    </style>
+    <div class="container">
+      <div class="main">
+        <div class="heading">
+          <h1>Silly Story Generator</h1>
+        </div>
+        <div class="input-field">
+          <label for="">Enter custom name : </label>
+          <input type="text" id="customname" placeholder="Enter Custom Name" />
+          <div>
+            <label for="">US</label>
+            <input id="us" type="radio" name="ukus" value="us" checked />
+            <label for="">UK</label>
+            <input id="uk" type="radio" name="ukus" value="uk" />
+          </div>
+        </div>
+        <button class="randomize">Generate Random Story</button>
+        <p class="story"></p>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
