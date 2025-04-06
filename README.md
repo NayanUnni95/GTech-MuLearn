@@ -31,3 +31,5 @@
 
 10. Sequencing Animations
     [:file_folder: Repo](https://github.com/NayanUnni95/GTech-MuLearn/tree/master/WebDevTask/SequencingAnimation) [:satellite: Host](https://nayanunni95.github.io/GTech-MuLearn/WebDevTask/SequencingAnimation/)
+11. Fundamental Layout Comprehension
+    [:file_folder: Repo](https://github.com/NayanUnni95/GTech-MuLearn/tree/master/WebDevTask/Fundamental-Layout-Comprehension) [:satellite: Host](https://nayanunni95.github.io/GTech-MuLearn/WebDevTask/Fundamental-Layout-Comprehension/)
