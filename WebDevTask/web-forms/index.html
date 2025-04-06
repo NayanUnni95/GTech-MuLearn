@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Form Practice</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      function validateForm(event) {
+        event.preventDefault();
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        let dob = document.getElementById("dob").value;
+        let message = document.getElementById("message").value;
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          alert("Invalid email format.");
+          return;
+        }
+        if (password.length < 6) {
+          alert("Password must be at least 6 characters long.");
+          return;
+        }
+
+        alert("Form submitted successfully!");
+      }
+    </script>
+  </head>
+  <body>
+    <form onsubmit="validateForm(event)">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required />
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" required />
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
